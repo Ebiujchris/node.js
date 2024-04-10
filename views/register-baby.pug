@@ -1,0 +1,26 @@
+doctype html
+head
+  link(rel='stylesheet' href='css/register_baby.css')
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Baby Registration Form
+form(action='register' method='post')
+  h2 Baby Registration Form
+  label(for='name') Baby&apos;s Name:
+  input#name(type='text' name='name')
+  label(for='dob') Date of Birth:
+  input#dob(type='date' name='dob')
+  label(for='gender') Gender:
+  select#gender(name='gender')
+    option(value='male') Male
+    option(value='female') Female
+  label(for='parentName') Parent&apos;s Name:
+  input#parentName(type='text' name='parentName')
+  label(for='email') Email:
+  input#email(type='email' name='email')
+  label(for='phone') Phone:
+  input#phone(type='text' name='phone')
+  label(for='address') Address:
+  textarea#address(name='address' rows='4')
+  input(type='submit' value='Register')
+script(src='js/register-baby.js')
