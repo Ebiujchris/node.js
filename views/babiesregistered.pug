@@ -1,0 +1,49 @@
+
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Document
+  link(rel='stylesheet' href='/sitter.css')
+  link(rel='icon' type='image/png' href='/images/logo.jpeg')
+  link(href='/css/bootstrap/css/bootstrap.css' rel='stylesheet')
+  link(rel='icon' type='image/png' href='/images/logo.jpeg')
+// Table to display the submitted data
+table#babyTable
+  thead
+    tr
+      th name
+      th dob
+      th gender
+      th parentName
+      th email
+      th phone
+      th Gender
+      th phone
+      th Actions
+  tbody
+     if babies.length 
+     each baby in babies    
+      tr 
+       td #{baby.name}
+       td #{baby.dob}
+       td #{baby.gender}
+       td #{baby.parentName}
+       td #{baby.email}
+       td #{baby.phone}
+       td #{baby.address}
+       td  
+          a(href="/babiesUpdate/"+baby._id) Update
+       td 
+         form(method="POST" action="/delete")
+          input(type="hidden" name="id" value=baby._id)
+          button(type='submit') Delete
+     
+
+
+
+     // Baby information will be inserted here
+script(src='/js/babyregistration.js')
+script(src='/css/bootstrap/js/bootstrap.js')
+
+

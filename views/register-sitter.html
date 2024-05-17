@@ -3,64 +3,103 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/style.css">
   <title>Document</title>
-  
 </head>
+<!-- <nav class="navbar">
+  <div class="container">
+    <a href="#" class="brand">Your Brand</a>
+    <ul class="nav-links">
+      <li><a href="#" class="nav-link">Home</a></li>
+      <li><a href="#" class="nav-link">Dashboard</a></li>
+    </ul>
+  </div>
+</nav> -->
+
 <body >
   <div class="container">
     <h1>Sitter Registration</h1>
-    <form id="sitter-form">
-      <label for="fullname">Full Name:</label>
-      <input type="text" id="fullname" required><br>
-      
-      <label for="sex">Sex:</label>
-      <select id="sex" required>
-        <option value="male">Male</option>
-        <option value="female">Female</option>
-      </select><br>
-      
-      <label for="religion">Religion:</label>
-      <input type="text" id="religion"><br>
+    <form id="sitter-form" onsubmit="return validateForm()">
+        <div class="label-input-group">
+            <label for="Sirname">Sirname:</label>
+            <input type="text" id="Sirname">
+        </div>
 
-      <label for="contact">Contact:</label>
-      <input type="tel" id="contact" pattern="[0-9]{10}" required><br>
+        
+        <div class="label-input-group">
+          <label for="Givenname">Given name:</label>
+          <input type="text" id="Givenname">
+      </div>
+        
 
-      <label for="dob">Date of Birth:</label>
-      <input type="date" id="dob" required><br>
 
-      <label for="date-joined">Date Joined School:</label>
-      <input type="date" id="date-joined" required><br>
+        <div class="label-input-group">
+            <label for="contact">Contact:</label>
+            <input type="tel" id="contact" pattern="[0-9]{10}">
+        </div>
 
-      <label for="nssf">NSSF Number:</label>
-      <input type="text" id="nssf"><br>
+        <div class="label-input-group">
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" >
+        </div>
 
-      <label for="bank-account">Bank Account:</label>
-      <input type="text" id="bank-account"><br>
+        <div class="label-input-group">
+            <label for="date-joined">Date Joined School:</label>
+            <input type="date" id="date-joined">
+        </div>
 
-      <label for="address">Address:</label>
-      <textarea id="address" rows="3" required></textarea><br>
+        <div class="label-input-group">
+            <label for="nssf">NSSF Number:</label>
+            <input type="text" id="nssf">
+        </div>
 
-      <label for="amount-paid">Amount Paid:</label>
-      <input type="number" id="amount-paid" required><br>
+        <div class="label-input-group">
+            <label for="bank-account">Bank Account:</label>
+            <input type="text" id="bank-account">
+        </div>
 
-      <label for="next-of-kin1">Next of Kin 1:</label>
-      <input type="text" id="next-of-kin1" required><br>
+        <div class="label-input-group">
+            <label for="address">Address:</label>
+            <textarea id="address" rows="3"></textarea>
+        </div>
 
-      <label for="contact-nok1">Contact Next of Kin 1:</label>
-      <input type="tel" id="contact-nok1" pattern="[0-9]{10}" required><br>
+        <div class="label-input-group">
+            <label for="amount-paid">Amount Paid:</label>
+            <input type="number" id="amount-paid" >
+        </div>
 
-      <label for="next-of-kin2">Next of Kin 2:</label>
-      <input type="text" id="next-of-kin2"><br>
+        <div class="label-input-group">
+            <label for="next-of-kin1">Next of Kin 1:</label>
+            <input type="text" id="next-of-kin1" >
+        </div>
 
-      <label for="contact-nok2">Contact Next of Kin 2:</label>
-      <input type="tel" id="contact-nok2" pattern="[0-9]{10}"><br>
 
-      <label for="image">Upload Image:</label>
-      <input type="file" id="image" accept="image/*" required><br>
-      
-      <button type="submit">Register Sitter</button>
+      <div class="label-input-group">
+        <label for="gender">Gender:</label> <!-- Moved the label here -->
+        <div class="gender-selection"> <!-- Moved the gender-selection div here -->
+            <label for="male" class="gender-option">
+                <input type="radio" id="male" name="gender" value="male">
+                <span class="gender-circle"></span>
+                Male
+            </label>
+            <label for="female" class="gender-option">
+                <input type="radio" id="female" name="gender" value="female">
+                <span class="gender-circle"></span>
+                Female
+            </label>
+        </div>
+    </div><br>
+    
+    
+  
+
+        <button type="submit">Register Sitter</button>
     </form>
 </div>
+
+  <script src="/public/js/validate.js"></script>    
+      
+</div>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js" integrity="sha384-y6AdV5VoyxIM7u6CXjiM2t6nN8u8VZRn9BPHmwhKf1JwqTzIkaDJ0qqxthhY0jZs" crossorigin="anonymous"></script>
 </body>
 </html>
